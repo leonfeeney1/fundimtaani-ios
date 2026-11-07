@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9405CC28CCF30A2D9C141E73 /* FundiMtaaniAdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904B1ED9EF163E8CD846059 /* FundiMtaaniAdminApp.swift */; };
+		93599754619DF8F0343B314B /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A164A161D6AA60FEE738E9 /* Brand.swift */; };
+		96688B6430E26DDE1F12D120 /* SiteMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062B15F5A8F4692F6131BDE5 /* SiteMode.swift */; };
+		79ACE0C8ADDE080DBD189C41 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED9485C4C119C987BDAA1 /* WebViewContainer.swift */; };
+		C5728698555432172A062550 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A5AB42F14DAB4BBE1CC8D /* ContentView.swift */; };
+		A960FEE0DA9EF53C8DD2C77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A3A7C7ACA6A1F46CC26641 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1904B1ED9EF163E8CD846059 /* FundiMtaaniAdminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundiMtaaniAdminApp.swift; sourceTree = "<group>"; };
+		09A164A161D6AA60FEE738E9 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		062B15F5A8F4692F6131BDE5 /* SiteMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMode.swift; sourceTree = "<group>"; };
+		FACED9485C4C119C987BDAA1 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		710A5AB42F14DAB4BBE1CC8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8A3A7C7ACA6A1F46CC26641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00E2DFF4140E3A19EA93F19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		734B836C63A98640468AC985 /* FundiMtaaniAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundiMtaaniAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB95120BD42D968A605D33BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AE53E8B18C6DBB433BF5C7C /* FundiMtaaniAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				1904B1ED9EF163E8CD846059 /* FundiMtaaniAdminApp.swift */,
+				09A164A161D6AA60FEE738E9 /* Brand.swift */,
+				062B15F5A8F4692F6131BDE5 /* SiteMode.swift */,
+				FACED9485C4C119C987BDAA1 /* WebViewContainer.swift */,
+				710A5AB42F14DAB4BBE1CC8D /* ContentView.swift */,
+				C8A3A7C7ACA6A1F46CC26641 /* Assets.xcassets */,
+				00E2DFF4140E3A19EA93F19C /* Info.plist */,
+			);
+			path = FundiMtaaniAdmin;
+			sourceTree = "<group>";
+		};
+		E979748C97B02450A689B24E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				734B836C63A98640468AC985 /* FundiMtaaniAdmin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9F729097B4E640BFFC0D774 = {
+			isa = PBXGroup;
+			children = (
+				5AE53E8B18C6DBB433BF5C7C /* FundiMtaaniAdmin */,
+				E979748C97B02450A689B24E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43676303996065EA89195573 /* FundiMtaaniAdmin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79B9655737D465CD93795BF8 /* Build configuration list for PBXNativeTarget "FundiMtaaniAdmin" */;
+			buildPhases = (
+				221D16FC5920721C458E5883 /* Sources */,
+				BB95120BD42D968A605D33BE /* Frameworks */,
+				1CCA29F50B43869CD4264D67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FundiMtaaniAdmin;
+			productName = FundiMtaaniAdmin;
+			productReference = 734B836C63A98640468AC985 /* FundiMtaaniAdmin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40AC3EBDF5BA4E7382578745 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					43676303996065EA89195573 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 1ED9C54DD67DC4DBAE5445F6 /* Build configuration list for PBXProject "FundiMtaaniAdmin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9F729097B4E640BFFC0D774;
+			productRefGroup = E979748C97B02450A689B24E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43676303996065EA89195573 /* FundiMtaaniAdmin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CCA29F50B43869CD4264D67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960FEE0DA9EF53C8DD2C77D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		221D16FC5920721C458E5883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9405CC28CCF30A2D9C141E73 /* FundiMtaaniAdminApp.swift in Sources */,
+				93599754619DF8F0343B314B /* Brand.swift in Sources */,
+				96688B6430E26DDE1F12D120 /* SiteMode.swift in Sources */,
+				79ACE0C8ADDE080DBD189C41 /* WebViewContainer.swift in Sources */,
+				C5728698555432172A062550 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9792A43F91635D75FDCA556D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FundiMtaaniAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.starford.fundimtaani.admin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A7DF5171F3C0301B2DFC9633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FundiMtaaniAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.starford.fundimtaani.admin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		83786B0E8F3BA32558AC3356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		54A2962ACA635B7696C28584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79B9655737D465CD93795BF8 /* Build configuration list for PBXNativeTarget "FundiMtaaniAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9792A43F91635D75FDCA556D /* Debug */,
+				A7DF5171F3C0301B2DFC9633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED9C54DD67DC4DBAE5445F6 /* Build configuration list for PBXProject "FundiMtaaniAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83786B0E8F3BA32558AC3356 /* Debug */,
+				54A2962ACA635B7696C28584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40AC3EBDF5BA4E7382578745 /* Project object */;
+}

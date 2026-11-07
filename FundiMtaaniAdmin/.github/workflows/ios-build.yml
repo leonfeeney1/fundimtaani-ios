@@ -1,0 +1,54 @@
+name: iOS build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build FundiMtaaniAdmin (unsigned)
+    runs-on: macos-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List project targets
+        run: xcodebuild -list -project FundiMtaaniAdmin.xcodeproj
+
+      - name: Build for simulator
+        run: |
+          xcodebuild build \
+            -project FundiMtaaniAdmin.xcodeproj \
+            -target FundiMtaaniAdmin \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Archive unsigned IPA
+        run: |
+          xcodebuild archive \
+            -project FundiMtaaniAdmin.xcodeproj \
+            -target FundiMtaaniAdmin \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/FundiMtaaniAdmin.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+          APP_PATH=$(find build/FundiMtaaniAdmin.xcarchive/Products/Applications -maxdepth 1 -name '*.app' | head -n 1)
+          test -n "$APP_PATH" || { echo "No .app found in the archive"; exit 1; }
+          mkdir -p build/Payload
+          cp -R "$APP_PATH" build/Payload/
+          cd build && zip -r FundiMtaaniAdmin-unsigned.ipa Payload
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: FundiMtaaniAdmin-unsigned-ipa
+          path: build/FundiMtaaniAdmin-unsigned.ipa
+          retention-days: 30
