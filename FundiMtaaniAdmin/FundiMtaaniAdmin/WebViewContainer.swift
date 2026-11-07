@@ -251,17 +251,14 @@ struct WebViewContainer: UIViewRepresentable {
         // WKDownloadDelegate methods take the WKDownload itself, not a
         // WKWebView: the webView(_:download:...) shapes never match the
         // protocol, so the compiler still reported non-conformance after
-        // round 1. Both decideDestination forms are required on this SDK
-        // (completion-handler and async); they share the destination
-        // above so the behaviour is identical either way.
+        // round 1. Only ONE decideDestination form may be implemented:
+        // the completion-handler and async forms share the same
+        // Objective-C selector, so implementing both is a compile error
+        // (round 2). The completion-handler form is kept; the async form
+        // is satisfied by the protocol's default implementation.
         @MainActor
         func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping @MainActor @Sendable (URL?) -> Void) {
             completionHandler(destinationURL(for: suggestedFilename))
-        }
-
-        @MainActor
-        func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String) async -> URL? {
-            destinationURL(for: suggestedFilename)
         }
 
         @MainActor
