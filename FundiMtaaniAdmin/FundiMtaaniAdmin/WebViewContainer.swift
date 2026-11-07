@@ -248,29 +248,32 @@ struct WebViewContainer: UIViewRepresentable {
             return destination
         }
 
-        // Both decideDestination forms are required by WKDownloadDelegate
-        // on this SDK (completion-handler and async). They share the
-        // destination above so the behaviour is identical either way.
+        // WKDownloadDelegate methods take the WKDownload itself, not a
+        // WKWebView: the webView(_:download:...) shapes never match the
+        // protocol, so the compiler still reported non-conformance after
+        // round 1. Both decideDestination forms are required on this SDK
+        // (completion-handler and async); they share the destination
+        // above so the behaviour is identical either way.
         @MainActor
-        func webView(_ webView: WKWebView, download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping @MainActor @Sendable (URL?) -> Void) {
+        func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping @MainActor @Sendable (URL?) -> Void) {
             completionHandler(destinationURL(for: suggestedFilename))
         }
 
         @MainActor
-        func webView(_ webView: WKWebView, download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String) async -> URL? {
+        func download(_ download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String) async -> URL? {
             destinationURL(for: suggestedFilename)
         }
 
-        func webView(_ webView: WKWebView, downloadDidFinish download: WKDownload) {
+        @MainActor
+        func downloadDidFinish(_ download: WKDownload) {
             guard let url = pendingDownloadURL else { return }
             pendingDownloadURL = nil
-            DispatchQueue.main.async {
-                let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-                Self.present(activity)
-            }
+            let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            Self.present(activity)
         }
 
-        func webView(_ webView: WKWebView, download: WKDownload, didFailWithError error: Error, resumeData: Data?) {
+        @MainActor
+        func download(_ download: WKDownload, didFailWithError error: Error, resumeData: Data?) {
             pendingDownloadURL = nil
         }
 

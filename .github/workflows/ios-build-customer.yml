@@ -28,28 +28,28 @@ jobs:
         run: |
           xcodebuild build \
             -project FundiMtaani.xcodeproj \
-            -target FundiMtaani \
+            -scheme FundiMtaani \
             -destination 'generic/platform=iOS Simulator' \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO
 
-      - name: Build unsigned IPA
+      - name: Archive unsigned IPA
         working-directory: FundiMtaani
         run: |
-          # No shared scheme is committed, and `xcodebuild archive`
-          # requires -scheme with -archivePath, so build for a generic
-          # iOS device instead and package the unsigned .app directly.
-          xcodebuild build \
+          # The shared scheme lives in xcshareddata/xcschemes, so
+          # -scheme works for both archive and -derivedDataPath (both
+          # reject -target without one).
+          xcodebuild archive \
             -project FundiMtaani.xcodeproj \
-            -target FundiMtaani \
+            -scheme FundiMtaani \
             -configuration Release \
             -destination 'generic/platform=iOS' \
-            -derivedDataPath build/DerivedData \
+            -archivePath build/FundiMtaani.xcarchive \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO
-          APP_PATH=$(find build/DerivedData/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' | head -n 1)
-          test -n "$APP_PATH" || { echo "No .app found in the build products"; exit 1; }
+          APP_PATH=$(find build/FundiMtaani.xcarchive/Products/Applications -maxdepth 1 -name '*.app' | head -n 1)
+          test -n "$APP_PATH" || { echo "No .app found in the archive"; exit 1; }
           mkdir -p build/Payload
           cp -R "$APP_PATH" build/Payload/
           cd build && zip -r FundiMtaani-unsigned.ipa Payload
