@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF77D661F013E60619D492C2 /* FundiMtaaniNativeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829AF3B31571C7B37667629 /* FundiMtaaniNativeApp.swift */; };
+		BD91ACBD2C8E30E947BFE828 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FAA1F783DC0C7139FA579 /* Brand.swift */; };
+		F0BA71BD46A7D16A9C273366 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743DC26B3CF7F2704910BBE /* Models.swift */; };
+		DCAE9C4E0E5F1CEFDD95460B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731D210AFAA05CEE60F414D7 /* APIClient.swift */; };
+		2CB11E8E321ED49D8B189AC4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FAC92CB2F1CB786006DA8 /* AppState.swift */; };
+		42DC602AED1095A8E0D52A06 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE8790B547BF0DF1827693C /* ModeView.swift */; };
+		B776F5264355FADD0CF2AD51 /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F38097BCF7F89B31A4274E /* SharedViews.swift */; };
+		858B1238872B1ADFCE1FC0D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E057FA11AD781F3B80E0AD7D /* HomeView.swift */; };
+		05143B80F9E5B78AA032D4F5 /* FundiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7246D44569C579E8CC0C1 /* FundiListView.swift */; };
+		9852DDDD1D6B8EB55CD12E29 /* FundiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6264C8F985F9CE67C8298F98 /* FundiDetailView.swift */; };
+		8F61B8D9116186F8280625E4 /* BookingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F175D896767C3E4BB50BBB /* BookingFormView.swift */; };
+		6A27A7108526A4954BB89DA8 /* BookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836EE4BCDE4E0636247E564 /* BookingsView.swift */; };
+		3859733D0F69D067A1C277F4 /* AuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F026D63D5E0789E2A03D6 /* AuthViews.swift */; };
+		F0C0E874C11E701DA1CCBB0E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96760C2877073AA33C04012B /* AccountView.swift */; };
+		74E5EF46C3DE362C5351E8A4 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F444A66D44E42B2F999F5E /* SavedView.swift */; };
+		F40CE02D7020EE35B96D8ADB /* CoverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320FA70DB6C29F3E9165AE6 /* CoverageView.swift */; };
+		FFB4BD4FCF1088E394CF1B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237F92F47B351E61463EFE67 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7829AF3B31571C7B37667629 /* FundiMtaaniNativeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundiMtaaniNativeApp.swift; sourceTree = "<group>"; };
+		B56FAA1F783DC0C7139FA579 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		C743DC26B3CF7F2704910BBE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		731D210AFAA05CEE60F414D7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		461FAC92CB2F1CB786006DA8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CDE8790B547BF0DF1827693C /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
+		B4F38097BCF7F89B31A4274E /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
+		E057FA11AD781F3B80E0AD7D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		ABC7246D44569C579E8CC0C1 /* FundiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundiListView.swift; sourceTree = "<group>"; };
+		6264C8F985F9CE67C8298F98 /* FundiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundiDetailView.swift; sourceTree = "<group>"; };
+		F6F175D896767C3E4BB50BBB /* BookingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingFormView.swift; sourceTree = "<group>"; };
+		0836EE4BCDE4E0636247E564 /* BookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsView.swift; sourceTree = "<group>"; };
+		B29F026D63D5E0789E2A03D6 /* AuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViews.swift; sourceTree = "<group>"; };
+		96760C2877073AA33C04012B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		18F444A66D44E42B2F999F5E /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		8320FA70DB6C29F3E9165AE6 /* CoverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageView.swift; sourceTree = "<group>"; };
+		237F92F47B351E61463EFE67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		919220CB9F37D4DADDB481C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88E10515485CE41B81D9E2DB /* FundiMtaaniNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundiMtaaniNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFB32515610A328CC3502EC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EC0B483A61F29B15779BCCF /* FundiMtaaniNative */ = {
+			isa = PBXGroup;
+			children = (
+				7829AF3B31571C7B37667629 /* FundiMtaaniNativeApp.swift */,
+				B56FAA1F783DC0C7139FA579 /* Brand.swift */,
+				C743DC26B3CF7F2704910BBE /* Models.swift */,
+				731D210AFAA05CEE60F414D7 /* APIClient.swift */,
+				461FAC92CB2F1CB786006DA8 /* AppState.swift */,
+				CDE8790B547BF0DF1827693C /* ModeView.swift */,
+				B4F38097BCF7F89B31A4274E /* SharedViews.swift */,
+				E057FA11AD781F3B80E0AD7D /* HomeView.swift */,
+				ABC7246D44569C579E8CC0C1 /* FundiListView.swift */,
+				6264C8F985F9CE67C8298F98 /* FundiDetailView.swift */,
+				F6F175D896767C3E4BB50BBB /* BookingFormView.swift */,
+				0836EE4BCDE4E0636247E564 /* BookingsView.swift */,
+				B29F026D63D5E0789E2A03D6 /* AuthViews.swift */,
+				96760C2877073AA33C04012B /* AccountView.swift */,
+				18F444A66D44E42B2F999F5E /* SavedView.swift */,
+				8320FA70DB6C29F3E9165AE6 /* CoverageView.swift */,
+				237F92F47B351E61463EFE67 /* Assets.xcassets */,
+				919220CB9F37D4DADDB481C2 /* Info.plist */,
+			);
+			path = FundiMtaaniNative;
+			sourceTree = "<group>";
+		};
+		496865AE8C028F449612D8F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88E10515485CE41B81D9E2DB /* FundiMtaaniNative.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F82C46C4A17EFFFA1E31AB65 = {
+			isa = PBXGroup;
+			children = (
+				0EC0B483A61F29B15779BCCF /* FundiMtaaniNative */,
+				496865AE8C028F449612D8F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7505EEE149EEC27D008C2FAA /* FundiMtaaniNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC021C941E379D79BC7D44D5 /* Build configuration list for PBXNativeTarget "FundiMtaaniNative" */;
+			buildPhases = (
+				03D4DB6F6188D8B67C24CBD0 /* Sources */,
+				EFB32515610A328CC3502EC9 /* Frameworks */,
+				447C6FFFF386DFF00DBC9B1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FundiMtaaniNative;
+			productName = FundiMtaaniNative;
+			productReference = 88E10515485CE41B81D9E2DB /* FundiMtaaniNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7DD9572A1B93A22759D98DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					7505EEE149EEC27D008C2FAA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = EADEF62E4E4E0F197CFF498C /* Build configuration list for PBXProject "FundiMtaaniNative" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F82C46C4A17EFFFA1E31AB65;
+			productRefGroup = 496865AE8C028F449612D8F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7505EEE149EEC27D008C2FAA /* FundiMtaaniNative */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		447C6FFFF386DFF00DBC9B1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB4BD4FCF1088E394CF1B71 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03D4DB6F6188D8B67C24CBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF77D661F013E60619D492C2 /* FundiMtaaniNativeApp.swift in Sources */,
+				BD91ACBD2C8E30E947BFE828 /* Brand.swift in Sources */,
+				F0BA71BD46A7D16A9C273366 /* Models.swift in Sources */,
+				DCAE9C4E0E5F1CEFDD95460B /* APIClient.swift in Sources */,
+				2CB11E8E321ED49D8B189AC4 /* AppState.swift in Sources */,
+				42DC602AED1095A8E0D52A06 /* ModeView.swift in Sources */,
+				B776F5264355FADD0CF2AD51 /* SharedViews.swift in Sources */,
+				858B1238872B1ADFCE1FC0D9 /* HomeView.swift in Sources */,
+				05143B80F9E5B78AA032D4F5 /* FundiListView.swift in Sources */,
+				9852DDDD1D6B8EB55CD12E29 /* FundiDetailView.swift in Sources */,
+				8F61B8D9116186F8280625E4 /* BookingFormView.swift in Sources */,
+				6A27A7108526A4954BB89DA8 /* BookingsView.swift in Sources */,
+				3859733D0F69D067A1C277F4 /* AuthViews.swift in Sources */,
+				F0C0E874C11E701DA1CCBB0E /* AccountView.swift in Sources */,
+				74E5EF46C3DE362C5351E8A4 /* SavedView.swift in Sources */,
+				F40CE02D7020EE35B96D8ADB /* CoverageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A9CC463F793090EB7277308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FundiMtaaniNative/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.starford.fundimtaani;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7D429FB7A7D6CE2A019F1374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FundiMtaaniNative/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.starford.fundimtaani;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0E684CC677B54AF4EE59E0A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A18A65F35E62EECB7454E605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC021C941E379D79BC7D44D5 /* Build configuration list for PBXNativeTarget "FundiMtaaniNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9CC463F793090EB7277308 /* Debug */,
+				7D429FB7A7D6CE2A019F1374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EADEF62E4E4E0F197CFF498C /* Build configuration list for PBXProject "FundiMtaaniNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E684CC677B54AF4EE59E0A5 /* Debug */,
+				A18A65F35E62EECB7454E605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7DD9572A1B93A22759D98DE /* Project object */;
+}
