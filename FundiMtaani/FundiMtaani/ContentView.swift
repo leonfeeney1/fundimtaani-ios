@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var isLoading = true
     @State private var hasContent = false
     @State private var isOffline = false
-    @State private var safariURL: URL?
+    @State private var safariURL: SafariItem?
     @State private var reloadTrigger = 0
 
     var body: some View {
@@ -49,8 +49,8 @@ struct ContentView: View {
                         .padding(.horizontal, 0)
                 }
             }
-            .sheet(item: $safariURL) { url in
-                SafariView(url: url)
+            .sheet(item: $safariURL) { item in
+                SafariView(url: item.url)
             }
         }
     }
@@ -91,6 +91,11 @@ struct ContentView: View {
     }
 }
 
-extension URL: Identifiable {
-    public var id: String { absoluteString }
+/// Identifiable wrapper for a URL opened in the in-app Safari sheet.
+/// URL itself must not be extended to Identifiable: it is an imported
+/// type, and the conformance warns that it will misbehave if Foundation
+/// ever adds it.
+struct SafariItem: Identifiable {
+    let id = UUID()
+    let url: URL
 }

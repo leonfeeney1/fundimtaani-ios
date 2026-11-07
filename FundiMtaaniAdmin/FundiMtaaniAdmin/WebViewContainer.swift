@@ -27,7 +27,7 @@ struct WebViewContainer: UIViewRepresentable {
     @Binding var isLoading: Bool
     @Binding var hasContent: Bool
     @Binding var isOffline: Bool
-    @Binding var safariURL: URL?
+    @Binding var safariURL: SafariItem?
     var reloadTrigger: Int
 
     func makeUIView(context: Context) -> WKWebView {
@@ -120,7 +120,7 @@ struct WebViewContainer: UIViewRepresentable {
             // leaves the app instead of being swallowed.
             if navigationAction.targetFrame == nil {
                 if url.host?.lowercased() == Brand.siteHost {
-                    DispatchQueue.main.async { self.parent.safariURL = url }
+                    DispatchQueue.main.async { self.parent.safariURL = SafariItem(url: url) }
                 } else {
                     openExternally(url)
                 }
@@ -212,11 +212,11 @@ struct WebViewContainer: UIViewRepresentable {
 
         // MARK: - WKUIDelegate
 
-        func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, window: WKWindowFeatures?) -> WKWebView? {
+        func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
             guard let url = navigationAction.request.url else { return nil }
             if handleExternalLink(url) { return nil }
             if url.host?.lowercased() == Brand.siteHost {
-                DispatchQueue.main.async { self.parent.safariURL = url }
+                DispatchQueue.main.async { self.parent.safariURL = SafariItem(url: url) }
             } else {
                 openExternally(url)
             }
@@ -238,11 +238,27 @@ struct WebViewContainer: UIViewRepresentable {
                 || path.hasPrefix("/admin/export/")
         }
 
-        func webView(_ webView: WKWebView, download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping (URL?) -> Void) {
+        /// Shared destination for both decideDestination forms: the file
+        /// lands in Documents and is offered through the share sheet
+        /// once the download finishes.
+        private func destinationURL(for suggestedFilename: String) -> URL {
             let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let destination = documents.appendingPathComponent(suggestedFilename)
             pendingDownloadURL = destination
-            completionHandler(destination)
+            return destination
+        }
+
+        // Both decideDestination forms are required by WKDownloadDelegate
+        // on this SDK (completion-handler and async). They share the
+        // destination above so the behaviour is identical either way.
+        @MainActor
+        func webView(_ webView: WKWebView, download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String, completionHandler: @escaping @MainActor @Sendable (URL?) -> Void) {
+            completionHandler(destinationURL(for: suggestedFilename))
+        }
+
+        @MainActor
+        func webView(_ webView: WKWebView, download: WKDownload, decideDestinationUsing response: URLResponse, suggestedFilename: String) async -> URL? {
+            destinationURL(for: suggestedFilename)
         }
 
         func webView(_ webView: WKWebView, downloadDidFinish download: WKDownload) {

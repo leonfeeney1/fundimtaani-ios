@@ -27,7 +27,7 @@ struct WebViewContainer: UIViewRepresentable {
     @Binding var isLoading: Bool
     @Binding var hasContent: Bool
     @Binding var isOffline: Bool
-    @Binding var safariURL: URL?
+    @Binding var safariURL: SafariItem?
     var reloadTrigger: Int
 
     func makeUIView(context: Context) -> WKWebView {
@@ -119,7 +119,7 @@ struct WebViewContainer: UIViewRepresentable {
             // leaves the app instead of being swallowed.
             if navigationAction.targetFrame == nil {
                 if url.host?.lowercased() == Brand.siteHost {
-                    DispatchQueue.main.async { self.parent.safariURL = url }
+                    DispatchQueue.main.async { self.parent.safariURL = SafariItem(url: url) }
                 } else {
                     openExternally(url)
                 }
@@ -207,11 +207,11 @@ struct WebViewContainer: UIViewRepresentable {
 
         // MARK: - WKUIDelegate
 
-        func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, window: WKWindowFeatures?) -> WKWebView? {
+        func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
             guard let url = navigationAction.request.url else { return nil }
             if handleExternalLink(url) { return nil }
             if url.host?.lowercased() == Brand.siteHost {
-                DispatchQueue.main.async { self.parent.safariURL = url }
+                DispatchQueue.main.async { self.parent.safariURL = SafariItem(url: url) }
             } else {
                 openExternally(url)
             }
